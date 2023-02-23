@@ -1,0 +1,269 @@
+body, html {
+  height: 1300px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.background {
+  position: relative;
+  background-image: linear-gradient(120deg, #65ead0 0%, #ab57cf 50%, #8556e3 75%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+body::-webkit-scrollbar {
+  width: 10px; }
+
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(120deg, #65ead0 0%, #ab57cf 50%, #8556e3 75%);
+  border-radius: 5px; }
+
+body::-webkit-scrollbar-track {
+  background-color: whitesmoke; }
+
+table {
+  border-spacing: 25px; }
+
+td {
+  color: whitesmoke; }
+
+h1 {
+  color: black;
+  background-color: linear-gradient(120deg, #65ead0 0%, #ab57cf 50%, #8556e3 75%); }
+
+.hi {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  top: 5%;
+  left: 10%;
+  font-family: Angkor;
+  font-size: 40px;
+  color: whitesmoke;
+  opacity: 0;
+  transform: translateY(7%);
+  animation: popup 0.5s linear forwards; }
+
+.job {
+  position: absolute;
+  font-size: 60px;
+  padding: 30px 15px 15px 0px; }
+
+.Im::after {
+  content: " Phuc,";
+  color: blue;
+  font-size: 45px; }
+
+.container_ava {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  opacity: 0;
+  transform: translateY(7%);
+  animation: popup 0.5s linear forwards; }
+
+.ava {
+  border-radius: 37% 63% 66% 34% / 30% 30% 70% 70%;
+  height: 350px;
+  box-shadow: 13px 15px 0 10px #5c1cdc; }
+
+.torch {
+  position: fixed;
+  bottom: 8%;
+  right: 5%;
+  height: 64px;
+  width: calc(288px / 9);
+  background: url(animated_torch.png);
+  transform: scale(2);
+  animation: moving1 1s steps(9) infinite; }
+
+.torch:checked ~ .background {
+  background-image: red;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative; }
+
+@keyframes moving1 {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 288px; } }
+
+@keyframes moving2 {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 1840px; } }
+
+.individual_infor {
+  position: relative;
+  top: 10%;
+  left: 10%;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: left;
+  flex-flow: row wrap;
+  margin: 0;
+  font-family: Angkor;
+  font-size: 15px;
+  color: whitesmoke;
+  opacity: 0;
+  transform: translateY(7%);
+  animation: popup 0.5s linear forwards; }
+
+.individual_infor_tittle {
+  flex-flow: column nowrap; }
+
+.individual_infor_detail {
+  flex-flow: column nowrap;
+  margin-left: 10px; }
+
+.contact_infor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 450px;
+  transform: translateY(7%);
+  opacity: 0;
+  transition: all 1s ease; }
+
+.contact_infor.active {
+  position: relative;
+  transform: translateY(0);
+  opacity: 1; }
+
+.welcome_to_contact {
+  font-family: Angkor;
+  font-size: 27px;
+  color: whitesmoke;
+  text-shadow: 2px 5px 2px black;
+  position: relative; }
+
+.social_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 25px;
+  position: relative; }
+
+.career_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 25px;
+  position: relative; }
+
+.personal_infor {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-size: 15px;
+  top: 38%; }
+
+.phone_mail {
+  position: relative;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-size: 15px;
+  top: 39%;
+  padding-bottom: 20px; }
+
+/* ---------------------RESPONSIVE----------------------- */
+/* tablet only */
+/* pc only */
+@media only screen and (min-width: 922px) {
+  .button1 {
+    left: 50%;
+    top: 510px;
+    font-size: 40px;
+    color: lightblue;
+    width: fit-content;
+    animation: bounce 1s infinite;
+    position: relative; }
+  @keyframes bounce {
+    100% {
+      top: 500px; } }
+  .button2 {
+    left: 50%;
+    top: 450px;
+    font-size: 40px;
+    width: fit-content;
+    color: lightblue;
+    animation: bounce2 1.0s infinite;
+    position: relative; }
+  @keyframes bounce2 {
+    100% {
+      top: 440px; } } }
+
+/* mobile only*/
+@media only screen and (max-width: 46.1875em) {
+  .container_ava {
+    top: -90px;
+    left: 50px;
+    position: relative; }
+  .ava {
+    height: 250px; }
+  .hi {
+    top: 350px;
+    margin: 0; }
+  .job {
+    font-size: 33px;
+    left: -23px;
+    top: 10%;
+    position: absolute; }
+  .Im {
+    font-size: 30px;
+    left: -20px;
+    position: relative; }
+  .Im::after {
+    font-size: 40px; }
+  .button1 {
+    visibility: hidden;
+    display: none; }
+  .button2 {
+    visibility: hidden;
+    display: none; }
+  .individual_infor {
+    position: relative;
+    top: 12%;
+    left: 5%;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: left;
+    flex-flow: column wrap;
+    margin: 0;
+    font-family: Angkor;
+    font-size: 15px;
+    color: whitesmoke;
+    opacity: 0;
+    transform: translateY(7%);
+    animation: popup 0.5s linear forwards; }
+  .individual_infor_tittle {
+    flex-flow: column nowrap; }
+  .individual_infor_detail {
+    flex-flow: column nowrap;
+    margin-left: 0; }
+  .summary {
+    top: 10%;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    flex-direction: column;
+    position: relative; }
+  .summary_tittle {
+    margin: 15px;
+    margin-right: 7px;
+    font-size: 24px; } }
+
+@keyframes popup {
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
